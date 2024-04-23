@@ -1,0 +1,356 @@
+BL51 BANKED LINKER/LOCATER V6.22              12/20/2012  16:06:42  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.22, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE C:\WorkFolder\MCU\WorkTrunk\Projects\Internal\2012\an
+>> 200sw\AN200SW\Device_Specific\C8051F326_7\USB_App_Firmware_Examples\F326_7_
+>> Testpanel2\TestPanel_Main.obj, C:\WorkFolder\MCU\WorkTrunk\Projects\Interna
+>> l\2012\an200sw\AN200SW\Device_Specific\C8051F326_7\USB_App_Firmware_Example
+>> s\F326_7_Testpanel2\USB_BL_APP_F326_7_16k_STARTUP.obj TO C:\WorkFolder\MCU\
+>> WorkTrunk\Projects\Internal\2012\an200sw\AN200SW\Device_Specific\C8051F326_
+>> 7\USB_App_Firmware_Examples\F326_7_Testpanel2\Testpanel2.OMF RS (256) PL (6
+>> 8) PW (78) CODE (0X1400-0X3BFD)
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  C:\WorkFolder\MCU\WorkTrunk\Projects\Internal\2012\an200sw\AN200SW\Device_Sp
+>> ecific\C8051F326_7\USB_App_Firmware_Examples\F326_7_Testpanel2\TestPanel_Ma
+>> in.obj (TESTPANEL_MAIN)
+  C:\WorkFolder\MCU\WorkTrunk\Projects\Internal\2012\an200sw\AN200SW\Device_Sp
+>> ecific\C8051F326_7\USB_App_Firmware_Examples\F326_7_Testpanel2\USB_BL_APP_F
+>> 326_7_16k_STARTUP.obj (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULCMP)
+
+
+LINK MAP OF MODULE:  C:\WorkFolder\MCU\WorkTrunk\Projects\Internal\2012\an200s
+>> w\AN200SW\Device_Specific\C8051F326_7\USB_App_Firmware_Examples\F326_7_Test
+>> panel2\Testpanel2.OMF (TESTPANEL_MAIN)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0016H     UNIT         ?DT?TESTPANEL_MAIN
+                    001EH     0002H                  *** GAP ***
+            BIT     0020H.0   0000H.1   UNIT         _BIT_GROUP_
+                    0020H.1   0000H.7                *** GAP ***
+            DATA    0021H     0005H     UNIT         _DATA_GROUP_
+                    0026H.0   0009H.7                *** GAP ***
+            BIT     002FH.7   0000H.1   ABSOLUTE     
+            IDATA   0030H     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+                    0000H     1400H                  *** GAP ***
+            CODE    1400H     0003H     ABSOLUTE     
+            CODE    1403H     0006H     UNIT         ?PR?INITIALIZE?TESTPANEL_
+>> MAIN
+                    1409H     0003H                  *** GAP ***
+            CODE    140CH     0003H     ABSOLUTE     
+            CODE    140FH     0011H     UNIT         ?PR?SUSPEND_DEVICE?TESTPA
+>> NEL_MAIN
+            CODE    1420H     0011H     UNIT         ?C?LIB_CODE
+                    1431H     0002H                  *** GAP ***
+            CODE    1433H     0003H     ABSOLUTE     
+            CODE    1436H     00F8H     UNIT         ?PR?MAIN?TESTPANEL_MAIN
+            CODE    152EH     008CH     UNIT         ?C_C51STARTUP
+            CODE    15BAH     007DH     UNIT         ?PR?USB_API_TEST_ISR?TEST
+>> PANEL_MAIN
+            CODE    1637H     002FH     UNIT         ?PR?TIMER1_ISR?TESTPANEL_
+>> MAIN
+            CODE    1666H     0027H     UNIT         ?C_INITSEG
+            CODE    168DH     000DH     UNIT         ?PR?PORT_INIT?TESTPANEL_M
+>> AIN
+            CODE    169AH     000DH     UNIT         ?PR?TIMER_INIT?TESTPANEL_
+BL51 BANKED LINKER/LOCATER V6.22            12/20/2012  16:06:42  PAGE 2
+
+
+>> MAIN
+                    16A7H     2554H                  *** GAP ***
+            CODE    3BFBH     0001H     ABSOLUTE     
+            CODE    3BFCH     0002H     ABSOLUTE     
+
+
+
+OVERLAY MAP OF MODULE:   C:\WorkFolder\MCU\WorkTrunk\Projects\Internal\2012\an
+>> 200sw\AN200SW\Device_Specific\C8051F326_7\USB_App_Firmware_Examples\F326_7_
+>> Testpanel2\Testpanel2.OMF (TESTPANEL_MAIN)
+
+
+SEGMENT                                        BIT_GROUP          DATA_GROUP 
+  +--> CALLED SEGMENT                       START    LENGTH     START    LENGT
+>> H
+------------------------------------------------------------------------------
+>> -
+?PR?USB_API_TEST_ISR?TESTPANEL_MAIN         -----    -----      0021H    0001H
+>> 
+  +--> ?PR?SUSPEND_DEVICE?TESTPANEL_MAIN
+
+?PR?SUSPEND_DEVICE?TESTPANEL_MAIN           0020H.0  0000H.1    -----    -----
+>> 
+
+*** NEW ROOT ***************************************************
+
+?C_C51STARTUP                               -----    -----      -----    -----
+>> 
+  +--> ?PR?MAIN?TESTPANEL_MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?TESTPANEL_MAIN                     -----    -----      0022H    0004H
+>> 
+  +--> ?PR?INITIALIZE?TESTPANEL_MAIN
+
+?PR?INITIALIZE?TESTPANEL_MAIN               -----    -----      -----    -----
+>> 
+  +--> ?PR?PORT_INIT?TESTPANEL_MAIN
+  +--> ?PR?TIMER_INIT?TESTPANEL_MAIN
+
+
+
+SYMBOL TABLE OF MODULE:  C:\WorkFolder\MCU\WorkTrunk\Projects\Internal\2012\an
+>> 200sw\AN200SW\Device_Specific\C8051F326_7\USB_App_Firmware_Examples\F326_7_
+>> Testpanel2\Testpanel2.OMF (TESTPANEL_MAIN)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        TESTPANEL_MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  D:0080H         PUBLIC        P0
+  D:00A0H         PUBLIC        P2
+  C:1637H         PUBLIC        Timer1_ISR
+  B:00A8H.7       PUBLIC        EA
+  D:00A4H         PUBLIC        P0MDOUT
+  D:00A6H         PUBLIC        P2MDOUT
+  D:0008H         PUBLIC        Temperature
+  D:0009H         PUBLIC        Toggle1
+  C:15BAH         PUBLIC        USB_API_TEST_ISR
+  D:000AH         PUBLIC        Toggle2
+  C:1403H         PUBLIC        Initialize
+  C:140FH         PUBLIC        Suspend_Device
+  C:168DH         PUBLIC        Port_Init
+  C:1436H         PUBLIC        main
+BL51 BANKED LINKER/LOCATER V6.22            12/20/2012  16:06:42  PAGE 3
+
+
+  D:000BH         PUBLIC        Switch1State
+  D:000CH         PUBLIC        Switch2State
+  D:0089H         PUBLIC        TMOD
+  B:00A0H.2       PUBLIC        Led1
+  B:00A0H.3       PUBLIC        Led2
+  B:00A8H.3       PUBLIC        ET1
+  B:0088H.7       PUBLIC        TF1
+  D:008DH         PUBLIC        TH1
+  D:008BH         PUBLIC        TL1
+  B:0088H.6       PUBLIC        TR1
+  D:008EH         PUBLIC        CKCON
+  D:000DH         PUBLIC        In_Packet
+  D:0015H         PUBLIC        Out_Packet
+  D:001DH         PUBLIC        Potentiometer
+  C:169AH         PUBLIC        Timer_Init
+  -------         PROC          MAIN
+  -------         DO            
+  D:0022H         SYMBOL        DelayCount
+  -------         ENDDO         
+  C:1436H         LINE#         69
+  C:1436H         LINE#         70
+  C:1436H         LINE#         71
+  C:143FH         LINE#         73
+  C:1442H         LINE#         74
+  C:149CH         LINE#         75
+  C:149FH         LINE#         76
+  C:14A2H         LINE#         78
+  C:14A2H         LINE#         79
+  C:14A2H         LINE#         86
+  C:14ABH         LINE#         87
+  C:14ADH         LINE#         88
+  C:14B6H         LINE#         89
+  C:14B8H         LINE#         90
+  C:14BEH         LINE#         92
+  C:14C1H         LINE#         93
+  C:14C4H         LINE#         94
+  C:14CDH         LINE#         97
+  C:14D0H         LINE#         98
+  C:14D3H         LINE#         100
+  C:14F6H         LINE#         102
+  C:14F6H         LINE#         103
+  C:14F9H         LINE#         104
+  C:150EH         LINE#         105
+  C:150EH         LINE#         108
+  C:1526H         LINE#         109
+  C:1526H         LINE#         110
+  C:1528H         LINE#         111
+  C:152BH         LINE#         112
+  C:152BH         LINE#         113
+  -------         ENDPROC       MAIN
+  -------         PROC          PORT_INIT
+  C:168DH         LINE#         126
+  C:168DH         LINE#         127
+  C:168DH         LINE#         128
+  C:1690H         LINE#         129
+  C:1693H         LINE#         130
+  C:1696H         LINE#         131
+  C:1699H         LINE#         132
+  -------         ENDPROC       PORT_INIT
+  -------         PROC          TIMER_INIT
+  C:169AH         LINE#         140
+  C:169AH         LINE#         141
+  C:169AH         LINE#         142
+  C:169DH         LINE#         143
+  C:16A0H         LINE#         144
+BL51 BANKED LINKER/LOCATER V6.22            12/20/2012  16:06:42  PAGE 4
+
+
+  C:16A3H         LINE#         145
+  C:16A6H         LINE#         146
+  -------         ENDPROC       TIMER_INIT
+  -------         PROC          SUSPEND_DEVICE
+  -------         DO            
+  B:0020H.0       SYMBOL        ET1_save
+  -------         ENDDO         
+  C:140FH         LINE#         156
+  C:140FH         LINE#         157
+  C:140FH         LINE#         158
+  C:1413H         LINE#         161
+  C:1416H         LINE#         162
+  C:1418H         LINE#         164
+  C:141BH         LINE#         168
+  C:141FH         LINE#         169
+  -------         ENDPROC       SUSPEND_DEVICE
+  -------         PROC          INITIALIZE
+  C:1403H         LINE#         177
+  C:1403H         LINE#         178
+  C:1403H         LINE#         179
+  C:1406H         LINE#         180
+  -------         ENDPROC       INITIALIZE
+  -------         PROC          TIMER1_ISR
+  C:1637H         LINE#         189
+  C:1639H         LINE#         191
+  C:163BH         LINE#         193
+  C:1640H         LINE#         194
+  C:1640H         LINE#         195
+  C:1644H         LINE#         196
+  C:1644H         LINE#         197
+  C:1647H         LINE#         198
+  C:164AH         LINE#         199
+  C:164AH         LINE#         200
+  C:164CH         LINE#         201
+  C:164FH         LINE#         203
+  C:1654H         LINE#         204
+  C:1654H         LINE#         205
+  C:1658H         LINE#         206
+  C:1658H         LINE#         207
+  C:165BH         LINE#         208
+  C:165EH         LINE#         209
+  C:165EH         LINE#         210
+  C:1660H         LINE#         211
+  C:1663H         LINE#         212
+  -------         ENDPROC       TIMER1_ISR
+  -------         PROC          USB_API_TEST_ISR
+  -------         DO            
+  D:0021H         SYMBOL        INTVAL
+  -------         ENDDO         
+  C:15BAH         LINE#         219
+  C:15D7H         LINE#         221
+  C:15DCH         LINE#         223
+  C:15E1H         LINE#         224
+  C:15E1H         LINE#         225
+  C:15ECH         LINE#         226
+  C:15F9H         LINE#         230
+  C:15FEH         LINE#         231
+  C:1603H         LINE#         233
+  C:1606H         LINE#         235
+  C:1606H         LINE#         237
+  C:160BH         LINE#         238
+  C:160BH         LINE#         239
+  C:160EH         LINE#         240
+  C:160EH         LINE#         242
+  C:1613H         LINE#         243
+BL51 BANKED LINKER/LOCATER V6.22            12/20/2012  16:06:42  PAGE 5
+
+
+  C:1613H         LINE#         244
+  C:1615H         LINE#         245
+  C:1615H         LINE#         247
+  C:161AH         LINE#         248
+  C:161AH         LINE#         249
+  C:161CH         LINE#         250
+  C:161CH         LINE#         251
+  -------         ENDPROC       USB_API_TEST_ISR
+  -------         ENDMOD        TESTPANEL_MAIN
+
+  -------         MODULE        ?C_STARTUP
+  C:152EH         SEGMENT       ?C_C51STARTUP
+  I:0030H         SEGMENT       ?STACK
+  C:1400H         PUBLIC        ?C_STARTUP
+  N:03EFH         PUBLIC        ?_USB_INIT?BYTE
+  N:0CD6H         PUBLIC        BCDDEVICE
+  N:FFFFH         PUBLIC        BOOTLOAD_REQ
+  N:0C55H         PUBLIC        GET_INTERRUPT_SOURCE
+  N:0CD4H         PUBLIC        MAXPOWER
+  N:0C70H         PUBLIC        MFRSTR
+  N:0C6EH         PUBLIC        PID
+  N:0CA2H         PUBLIC        PRDSTR
+  N:0CD5H         PUBLIC        PWATTRIBUTES
+  N:0CD8H         PUBLIC        SERIAL
+  N:0C6CH         PUBLIC        USB_BL_USB_DESCRIPTOR
+  N:3D37H         PUBLIC        USB_CLOCK_START
+  N:0B9CH         PUBLIC        USB_DISABLE
+  N:3D8AH         PUBLIC        USB_GET_LIBRARY_VERSION
+  N:0C64H         PUBLIC        USB_INT_DISABLE
+  N:0C28H         PUBLIC        USB_INT_ENABLE
+  N:0974H         PUBLIC        USB_SUSPEND
+  N:0C6CH         PUBLIC        VID
+  N:0716H         PUBLIC        _BLOCK_READ
+  N:0416H         PUBLIC        _BLOCK_WRITE
+  N:3C00H         PUBLIC        _USB_INIT
+  D:00E0H         SYMBOL        ACC
+  C:3BFCH         SYMBOL        APP_FW_VER
+  D:00F0H         SYMBOL        B
+  C:3BFBH         SYMBOL        DEVICE_CODE
+  B:002FH.7       SYMBOL        DEVICE_MODE
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:1531H         SYMBOL        IDATALOOP
+  B:002FH.7       SYMBOL        MEM_DEVICE_MODE
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  N:0CE4H         SYMBOL        SERIAL_BL
+  D:0081H         SYMBOL        SP
+  C:152EH         SYMBOL        STARTUP1
+  N:1400H         SYMBOL        START_APPLICATION
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:1400H         LINE#         279
+  C:152EH         LINE#         286
+  C:1530H         LINE#         287
+BL51 BANKED LINKER/LOCATER V6.22            12/20/2012  16:06:42  PAGE 6
+
+
+  C:1531H         LINE#         288
+  C:1532H         LINE#         289
+  C:1534H         LINE#         338
+  C:1537H         LINE#         349
+  -------         ENDMOD        ?C_STARTUP
+
+  -------         MODULE        ?C?ULCMP
+  C:1420H         PUBLIC        ?C?ULCMP
+  -------         ENDMOD        ?C?ULCMP
+
+Program Size: data=36.2 xdata=0 code=677
+LINK/LOCATE RUN COMPLETE.  0 WARNING(S),  0 ERROR(S)

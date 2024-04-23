@@ -1,0 +1,762 @@
+BL51 BANKED LINKER/LOCATER V6.00              11/29/2010  10:58:27  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType
+>> _TargetBL_Template\Fnnn_Flash.obj, M:\PRIVATE\Projects\Modular_BL\Template\
+>> Fxxx_CommType_TargetBL_Template\Fnnn_TargetBL_DevSpecific.obj, M:\PRIVATE\P
+>> rojects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fxxx_CRCddd_CRC
+>> Type.obj, M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Te
+>> mplate\Fxxx_TargetBL_Commands.obj, M:\PRIVATE\Projects\Modular_BL\Template\
+>> Fxxx_CommType_TargetBL_Template\Fxxx_TargetBL_InfoBlock.obj, M:\PRIVATE\Pro
+>> jects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fxxx_TargetBL_Mai
+>> n.obj, M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Templ
+>> ate\Fnnn_Comm_CommType.obj, M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_Co
+>> mmType_TargetBL_Template\Fnnn_TargetBL_Startup.obj TO M:\PRIVATE\Projects\M
+>> odular_BL\Template\Fxxx_CommType_TargetBL_Template\Fxxx_CommType_TargetBL_T
+>> emplate.OMF RS (256) PL (68) PW (78) CODE (0X0-0X03FF, 0XFA00-0XFBFF, ?CO?F
+>> XXX_TARGETBL_INFOBLOCK (0XFBEF))
+
+
+MEMORY MODEL: SMALL
+
+
+INPUT MODULES INCLUDED:
+  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fnnn
+>> _Flash.obj (FNNN_FLASH)
+  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fnnn
+>> _TargetBL_DevSpecific.obj (FNNN_TARGETBL_DEVSPECIFIC)
+  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fxxx
+>> _CRCddd_CRCType.obj (FXXX_CRCDDD_CRCTYPE)
+  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fxxx
+>> _TargetBL_Commands.obj (FXXX_TARGETBL_COMMANDS)
+  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fxxx
+>> _TargetBL_InfoBlock.obj (FXXX_TARGETBL_INFOBLOCK)
+  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fxxx
+>> _TargetBL_Main.obj (FXXX_TARGETBL_MAIN)
+  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fnnn
+>> _Comm_CommType.obj (FNNN_COMM_COMMTYPE)
+  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_TargetBL_Template\Fnnn
+>> _TargetBL_Startup.obj (?C_STARTUP)
+  C:\KEIL\C51\LIB\C51S.LIB (?C_INIT)
+  C:\KEIL\C51\LIB\C51S.LIB (?C?ULCMP)
+
+
+LINK MAP OF MODULE:  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType_Tar
+>> getBL_Template\Fxxx_CommType_TargetBL_Template.OMF (FNNN_FLASH)
+
+
+            TYPE    BASE      LENGTH    RELOCATION   SEGMENT NAME
+            -----------------------------------------------------
+
+            * * * * * * *   D A T A   M E M O R Y   * * * * * * *
+            REG     0000H     0008H     ABSOLUTE     "REG BANK 0"
+            DATA    0008H     0032H     UNIT         ?DT?FXXX_TARGETBL_COMMAND
+>> S
+            DATA    003AH     000FH     UNIT         _DATA_GROUP_
+            DATA    0049H     0002H     UNIT         ?DT?FXXX_TARGETBL_MAIN
+            IDATA   004BH     0001H     UNIT         ?STACK
+
+            * * * * * * *   C O D E   M E M O R Y   * * * * * * *
+            CODE    0000H     0003H     ABSOLUTE     
+            CODE    0003H     0003H     ABSOLUTE     
+            CODE    0006H     0005H     UNIT         ?PR?_FLASH_PAGEERASE?FNNN
+>> _FLASH
+            CODE    000BH     0003H     ABSOLUTE     
+            CODE    000EH     0005H     UNIT         ?PR?_COMM_SEND_TX_BYTES?F
+>> NNN_COMM_COMMTYPE
+            CODE    0013H     0003H     ABSOLUTE     
+            CODE    0016H     0004H     UNIT         ?PR?DISABLE_WATCHDOG?FNNN
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 2
+
+
+>> _TARGETBL_DEVSPECIFIC
+            CODE    001AH     0001H     UNIT         ?PR?OSCILLATOR_INIT?FNNN_
+>> TARGETBL_DEVSPECIFIC
+            CODE    001BH     0003H     ABSOLUTE     
+            CODE    001EH     0004H     UNIT         ?PR?RESET_MCU_NOW?FNNN_TA
+>> RGETBL_DEVSPECIFIC
+            CODE    0022H     0001H     UNIT         ?PR?PORT_INIT?FNNN_TARGET
+>> BL_DEVSPECIFIC
+            CODE    0023H     0003H     ABSOLUTE     
+            CODE    0026H     0003H     UNIT         ?PR?DISABLE_GLOBAL_INTERR
+>> UPTS?FNNN_TARGETBL_DEVSPECIFIC
+            CODE    0029H     0001H     UNIT         ?PR?COMM_INIT?FNNN_COMM_C
+>> OMMTYPE
+                    002AH     0001H                  *** GAP ***
+            CODE    002BH     0003H     ABSOLUTE     
+            CODE    002EH     0003H     UNIT         ?PR?_UPDATE_CRC?FXXX_CRCD
+>> DD_CRCTYPE
+                    0031H     0002H                  *** GAP ***
+            CODE    0033H     0003H     ABSOLUTE     
+                    0036H     0005H                  *** GAP ***
+            CODE    003BH     0003H     ABSOLUTE     
+                    003EH     0005H                  *** GAP ***
+            CODE    0043H     0003H     ABSOLUTE     
+                    0046H     0005H                  *** GAP ***
+            CODE    004BH     0003H     ABSOLUTE     
+                    004EH     0005H                  *** GAP ***
+            CODE    0053H     0003H     ABSOLUTE     
+                    0056H     0005H                  *** GAP ***
+            CODE    005BH     0003H     ABSOLUTE     
+                    005EH     0005H                  *** GAP ***
+            CODE    0063H     0003H     ABSOLUTE     
+                    0066H     0005H                  *** GAP ***
+            CODE    006BH     0003H     ABSOLUTE     
+                    006EH     0005H                  *** GAP ***
+            CODE    0073H     0003H     ABSOLUTE     
+                    0076H     0005H                  *** GAP ***
+            CODE    007BH     0003H     ABSOLUTE     
+                    007EH     0005H                  *** GAP ***
+            CODE    0083H     0003H     ABSOLUTE     
+                    0086H     0005H                  *** GAP ***
+            CODE    008BH     0003H     ABSOLUTE     
+            CODE    008EH     00CBH     UNIT         ?PR?TGT_WRITE_FLASH?FXXX_
+>> TARGETBL_COMMANDS
+            CODE    0159H     00A3H     UNIT         ?PR?MAIN?FXXX_TARGETBL_MA
+>> IN
+            CODE    01FCH     0099H     UNIT         ?PR?TGT_GET_PAGE_CRC?FXXX
+>> _TARGETBL_COMMANDS
+            CODE    0295H     008CH     UNIT         ?C_C51STARTUP
+            CODE    0321H     0088H     UNIT         ?PR?TGT_ERASE_PAGE?FXXX_T
+>> ARGETBL_COMMANDS
+            CODE    03A9H     0034H     UNIT         ?PR?TGT_WRITE_SIGNATURE?F
+>> XXX_TARGETBL_COMMANDS
+            CODE    03DDH     001FH     UNIT         ?PR?CHECK_APP_FW_VALIDITY
+>> ?FXXX_TARGETBL_COMMANDS
+                    03FCH     F604H                  *** GAP ***
+            CODE    FA00H     0072H     UNIT         ?PR?TGT_GET_INFO?FXXX_TAR
+>> GETBL_COMMANDS
+            CODE    FA72H     0016H     UNIT         ?PR?TGT_ENTER_BL_MODE?FXX
+>> X_TARGETBL_COMMANDS
+            CODE    FA88H     0011H     UNIT         ?C?LIB_CODE
+            CODE    FA99H     0010H     UNIT         ?PR?CHECK_RESET_SOURCE?FN
+>> NN_TARGETBL_DEVSPECIFIC
+            CODE    FAA9H     000DH     UNIT         ?PR?TGT_RESET_MCU?FXXX_TA
+>> RGETBL_COMMANDS
+            CODE    FAB6H     000DH     UNIT         ?C_INITSEG
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 3
+
+
+            CODE    FAC3H     000BH     UNIT         ?PR?_COMM_WAIT_FOR_RX_BYT
+>> ES?FNNN_COMM_COMMTYPE
+            CODE    FACEH     000AH     UNIT         ?PR?TGT_UNSUPPORTED_CMD?F
+>> XXX_TARGETBL_COMMANDS
+            CODE    FAD8H     0009H     UNIT         ?PR?INIT_DEVICE?FNNN_TARG
+>> ETBL_DEVSPECIFIC
+            CODE    FAE1H     0009H     UNIT         ?PR?CHECK_OVERRIDE_PIN_ST
+>> ATE?FNNN_TARGETBL_DEVSPECIFIC
+            CODE    FAEAH     0007H     UNIT         ?PR?_FLASH_BYTEWRITE?FNNN
+>> _FLASH
+                    FAF1H     00FEH                  *** GAP ***
+            CODE    FBEFH     0010H     UNIT         ?CO?FXXX_TARGETBL_INFOBLO
+>> CK
+
+
+
+OVERLAY MAP OF MODULE:   M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType
+>> _TargetBL_Template\Fxxx_CommType_TargetBL_Template.OMF (FNNN_FLASH)
+
+
+SEGMENT                                            DATA_GROUP 
+  +--> CALLED SEGMENT                            START    LENGTH
+----------------------------------------------------------------
+?C_C51STARTUP                                    -----    -----
+  +--> ?PR?MAIN?FXXX_TARGETBL_MAIN
+  +--> ?C_INITSEG
+
+?PR?MAIN?FXXX_TARGETBL_MAIN                      003AH    0001H
+  +--> ?PR?DISABLE_WATCHDOG?FNNN_TARGETBL_DE...
+  +--> ?PR?DISABLE_GLOBAL_INTERRUPTS?FNNN_TA...
+  +--> ?PR?CHECK_APP_FW_VALIDITY?FXXX_TARGET...
+  +--> ?PR?CHECK_OVERRIDE_PIN_STATE?FNNN_TAR...
+  +--> ?PR?CHECK_RESET_SOURCE?FNNN_TARGETBL_...
+  +--> ?PR?INIT_DEVICE?FNNN_TARGETBL_DEVSPEC...
+  +--> ?PR?_COMM_WAIT_FOR_RX_BYTES?FNNN_COMM...
+  +--> ?PR?TGT_ENTER_BL_MODE?FXXX_TARGETBL_C...
+  +--> ?PR?TGT_GET_INFO?FXXX_TARGETBL_COMMANDS
+  +--> ?PR?TGT_ERASE_PAGE?FXXX_TARGETBL_COMM...
+  +--> ?PR?TGT_WRITE_SIGNATURE?FXXX_TARGETBL...
+  +--> ?PR?TGT_RESET_MCU?FXXX_TARGETBL_COMMANDS
+  +--> ?PR?TGT_GET_PAGE_CRC?FXXX_TARGETBL_CO...
+  +--> ?PR?TGT_WRITE_FLASH?FXXX_TARGETBL_COM...
+  +--> ?PR?TGT_UNSUPPORTED_CMD?FXXX_TARGETBL...
+
+?PR?INIT_DEVICE?FNNN_TARGETBL_DEVSPEC...         -----    -----
+  +--> ?PR?OSCILLATOR_INIT?FNNN_TARGETBL_DEV...
+  +--> ?PR?PORT_INIT?FNNN_TARGETBL_DEVSPECIFIC
+  +--> ?PR?COMM_INIT?FNNN_COMM_COMMTYPE
+
+?PR?_COMM_WAIT_FOR_RX_BYTES?FNNN_COMM...         003FH    0004H
+
+?PR?TGT_ENTER_BL_MODE?FXXX_TARGETBL_C...         -----    -----
+  +--> ?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...
+
+?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...         0047H    0002H
+
+?PR?TGT_GET_INFO?FXXX_TARGETBL_COMMANDS          -----    -----
+  +--> ?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...
+
+?PR?TGT_ERASE_PAGE?FXXX_TARGETBL_COMM...         003BH    0004H
+  +--> ?PR?_FLASH_PAGEERASE?FNNN_FLASH
+  +--> ?PR?CHECK_APP_FW_VALIDITY?FXXX_TARGET...
+  +--> ?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...
+
+?PR?_FLASH_PAGEERASE?FNNN_FLASH                  003FH    0002H
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 4
+
+
+
+?PR?TGT_WRITE_SIGNATURE?FXXX_TARGETBL...         -----    -----
+  +--> ?PR?_FLASH_BYTEWRITE?FNNN_FLASH
+  +--> ?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...
+
+?PR?_FLASH_BYTEWRITE?FNNN_FLASH                  003FH    0003H
+
+?PR?TGT_RESET_MCU?FXXX_TARGETBL_COMMANDS         -----    -----
+  +--> ?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...
+  +--> ?PR?RESET_MCU_NOW?FNNN_TARGETBL_DEVSP...
+
+?PR?TGT_GET_PAGE_CRC?FXXX_TARGETBL_CO...         003BH    000CH
+  +--> ?PR?_UPDATE_CRC?FXXX_CRCDDD_CRCTYPE
+  +--> ?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...
+
+?PR?_UPDATE_CRC?FXXX_CRCDDD_CRCTYPE              0047H    0001H
+
+?PR?TGT_WRITE_FLASH?FXXX_TARGETBL_COM...         003BH    0004H
+  +--> ?PR?_COMM_WAIT_FOR_RX_BYTES?FNNN_COMM...
+  +--> ?PR?_FLASH_BYTEWRITE?FNNN_FLASH
+  +--> ?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...
+
+?PR?TGT_UNSUPPORTED_CMD?FXXX_TARGETBL...         -----    -----
+  +--> ?PR?_COMM_SEND_TX_BYTES?FNNN_COMM_COM...
+
+
+
+SYMBOL TABLE OF MODULE:  M:\PRIVATE\Projects\Modular_BL\Template\Fxxx_CommType
+>> _TargetBL_Template\Fxxx_CommType_TargetBL_Template.OMF (FNNN_FLASH)
+
+  VALUE           TYPE          NAME
+  ----------------------------------
+
+  -------         MODULE        FNNN_FLASH
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0006H         PUBLIC        _FLASH_PageErase
+  C:FAEAH         PUBLIC        _FLASH_ByteWrite
+  -------         PROC          _FLASH_BYTEWRITE
+  D:003FH         SYMBOL        addr
+  D:0041H         SYMBOL        byte
+  C:FAEAH         LINE#         76
+  C:FAF0H         LINE#         77
+  C:FAF0H         LINE#         86
+  -------         ENDPROC       _FLASH_BYTEWRITE
+  -------         PROC          _FLASH_PAGEERASE
+  D:003FH         SYMBOL        addr
+  C:0006H         LINE#         101
+  C:000AH         LINE#         102
+  C:000AH         LINE#         111
+  -------         ENDPROC       _FLASH_PAGEERASE
+  -------         ENDMOD        FNNN_FLASH
+
+  -------         MODULE        FNNN_TARGETBL_DEVSPECIFIC
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  B:00A8H.7       PUBLIC        EA
+  C:0026H         PUBLIC        Disable_Global_Interrupts
+  D:00D9H         PUBLIC        PCA0MD
+  C:FA99H         PUBLIC        Check_Reset_Source
+  C:0022H         PUBLIC        PORT_Init
+  B:0090H.4       PUBLIC        BL_Override_Pin
+  C:FAD8H         PUBLIC        Init_Device
+  C:0016H         PUBLIC        Disable_Watchdog
+  C:001EH         PUBLIC        Reset_MCU_Now
+  D:00EFH         PUBLIC        RSTSRC
+  C:FAE1H         PUBLIC        Check_Override_Pin_State
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 5
+
+
+  C:001AH         PUBLIC        OSCILLATOR_Init
+  -------         PROC          DISABLE_WATCHDOG
+  C:0016H         LINE#         79
+  C:0016H         LINE#         80
+  C:0016H         LINE#         82
+  C:0019H         LINE#         83
+  -------         ENDPROC       DISABLE_WATCHDOG
+  -------         PROC          DISABLE_GLOBAL_INTERRUPTS
+  C:0026H         LINE#         95
+  C:0026H         LINE#         96
+  C:0026H         LINE#         98
+  C:0028H         LINE#         99
+  -------         ENDPROC       DISABLE_GLOBAL_INTERRUPTS
+  -------         PROC          INIT_DEVICE
+  C:FAD8H         LINE#         111
+  C:FAD8H         LINE#         112
+  C:FAD8H         LINE#         113
+  C:FADBH         LINE#         114
+  C:FADEH         LINE#         115
+  -------         ENDPROC       INIT_DEVICE
+  -------         PROC          CHECK_OVERRIDE_PIN_STATE
+  C:FAE1H         LINE#         131
+  C:FAE1H         LINE#         132
+  C:FAE1H         LINE#         136
+  C:FAE4H         LINE#         137
+  C:FAE4H         LINE#         138
+  C:FAE7H         LINE#         139
+  C:FAE7H         LINE#         141
+  C:FAE7H         LINE#         142
+  C:FAE9H         LINE#         143
+  C:FAE9H         LINE#         144
+  -------         ENDPROC       CHECK_OVERRIDE_PIN_STATE
+  -------         PROC          CHECK_RESET_SOURCE
+  C:FA99H         LINE#         157
+  C:FA99H         LINE#         158
+  C:FA99H         LINE#         162
+  C:FAA3H         LINE#         163
+  C:FAA3H         LINE#         167
+  C:FAA6H         LINE#         168
+  C:FAA6H         LINE#         170
+  C:FAA6H         LINE#         171
+  C:FAA8H         LINE#         172
+  C:FAA8H         LINE#         173
+  -------         ENDPROC       CHECK_RESET_SOURCE
+  -------         PROC          RESET_MCU_NOW
+  C:001EH         LINE#         186
+  C:001EH         LINE#         187
+  C:001EH         LINE#         191
+  C:0021H         LINE#         192
+  -------         ENDPROC       RESET_MCU_NOW
+  -------         PROC          OSCILLATOR_INIT
+  C:001AH         LINE#         204
+  C:001AH         LINE#         205
+  C:001AH         LINE#         208
+  -------         ENDPROC       OSCILLATOR_INIT
+  -------         PROC          PORT_INIT
+  C:0022H         LINE#         220
+  C:0022H         LINE#         221
+  C:0022H         LINE#         224
+  -------         ENDPROC       PORT_INIT
+  -------         ENDMOD        FNNN_TARGETBL_DEVSPECIFIC
+
+  -------         MODULE        FXXX_CRCDDD_CRCTYPE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:002EH         PUBLIC        _Update_CRC
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 6
+
+
+  -------         PROC          _UPDATE_CRC
+  D:0047H         SYMBOL        newbyte
+  C:002EH         LINE#         72
+  C:0030H         LINE#         73
+  C:0030H         LINE#         78
+  -------         ENDPROC       _UPDATE_CRC
+  -------         ENDMOD        FXXX_CRCDDD_CRCTYPE
+
+  -------         MODULE        FXXX_TARGETBL_COMMANDS
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:01FCH         PUBLIC        TGT_Get_Page_CRC
+  C:03DDH         PUBLIC        Check_App_FW_Validity
+  C:FAA9H         PUBLIC        TGT_Reset_MCU
+  D:0008H         PUBLIC        Running_CRC
+  C:0321H         PUBLIC        TGT_Erase_Page
+  C:FA72H         PUBLIC        TGT_Enter_BL_Mode
+  D:000AH         PUBLIC        Flash_Key0
+  D:000BH         PUBLIC        Flash_Key1
+  C:008EH         PUBLIC        TGT_Write_Flash
+  D:000CH         PUBLIC        Current_Addr
+  D:0010H         PUBLIC        Rx_Buf
+  D:0018H         PUBLIC        Tx_Buf
+  C:FA00H         PUBLIC        TGT_Get_Info
+  C:FACEH         PUBLIC        TGT_Unsupported_Cmd
+  C:03A9H         PUBLIC        TGT_Write_Signature
+  -------         PROC          CHECK_APP_FW_VALIDITY
+  -------         DO            
+  D:0007H         SYMBOL        retval
+  D:0004H         SYMBOL        codeptr
+  -------         ENDDO         
+  C:03DDH         LINE#         81
+  C:03DDH         LINE#         82
+  C:03DDH         LINE#         83
+  C:03DFH         LINE#         88
+  C:03E3H         LINE#         92
+  C:03F1H         LINE#         93
+  C:03F1H         LINE#         94
+  C:03FAH         LINE#         95
+  C:03FAH         LINE#         97
+  C:03FBH         LINE#         98
+  C:03FBH         LINE#         99
+  C:03FBH         LINE#         111
+  C:03FBH         LINE#         112
+  -------         ENDPROC       CHECK_APP_FW_VALIDITY
+  -------         PROC          TGT_ENTER_BL_MODE
+  C:FA72H         LINE#         124
+  C:FA72H         LINE#         125
+  C:FA72H         LINE#         135
+  C:FA7BH         LINE#         137
+  C:FA7BH         LINE#         138
+  C:FA7EH         LINE#         139
+  C:FA81H         LINE#         140
+  C:FA87H         LINE#         141
+  C:FA87H         LINE#         142
+  -------         ENDPROC       TGT_ENTER_BL_MODE
+  -------         PROC          TGT_GET_INFO
+  -------         DO            
+  D:0007H         SYMBOL        numbytes
+  D:0006H         SYMBOL        i
+  D:0001H         SYMBOL        index
+  D:0082H         SYMBOL        codeptr
+  -------         ENDDO         
+  C:FA00H         LINE#         154
+  C:FA00H         LINE#         155
+  C:FA00H         LINE#         176
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 7
+
+
+  C:FA03H         LINE#         177
+  C:FA06H         LINE#         178
+  C:FA0EH         LINE#         183
+  C:FA11H         LINE#         184
+  C:FA13H         LINE#         186
+  C:FA15H         LINE#         188
+  C:FA1FH         LINE#         189
+  C:FA1FH         LINE#         191
+  C:FA2BH         LINE#         192
+  C:FA33H         LINE#         196
+  C:FA36H         LINE#         199
+  C:FA39H         LINE#         200
+  C:FA3CH         LINE#         201
+  C:FA44H         LINE#         206
+  C:FA4AH         LINE#         208
+  C:FA54H         LINE#         209
+  C:FA54H         LINE#         211
+  C:FA60H         LINE#         212
+  C:FA68H         LINE#         216
+  C:FA6BH         LINE#         218
+  -------         ENDPROC       TGT_GET_INFO
+  -------         PROC          TGT_ERASE_PAGE
+  -------         DO            
+  D:003BH         SYMBOL        addr
+  -------         ENDDO         
+  C:0321H         LINE#         231
+  C:0321H         LINE#         232
+  C:0321H         LINE#         248
+  C:0324H         LINE#         249
+  C:0327H         LINE#         250
+  C:032AH         LINE#         251
+  C:032DH         LINE#         253
+  C:036AH         LINE#         255
+  C:036AH         LINE#         257
+  C:036DH         LINE#         258
+  C:036FH         LINE#         260
+  C:036FH         LINE#         261
+  C:037FH         LINE#         262
+  C:0382H         LINE#         264
+  C:0385H         LINE#         265
+  C:0388H         LINE#         266
+  C:038BH         LINE#         267
+  C:038DH         LINE#         270
+  C:0394H         LINE#         276
+  C:0397H         LINE#         277
+  C:0399H         LINE#         280
+  C:039DH         LINE#         281
+  C:039DH         LINE#         282
+  C:03A2H         LINE#         283
+  C:03A2H         LINE#         284
+  C:03A2H         LINE#         286
+  -------         ENDPROC       TGT_ERASE_PAGE
+  -------         PROC          TGT_WRITE_FLASH
+  -------         DO            
+  D:003BH         SYMBOL        numbytes
+  D:003DH         SYMBOL        i
+  -------         ENDDO         
+  C:008EH         LINE#         299
+  C:008EH         LINE#         300
+  C:008EH         LINE#         321
+  C:0092H         LINE#         322
+  C:0092H         LINE#         324
+  C:0095H         LINE#         325
+  C:0098H         LINE#         327
+  C:0098H         LINE#         328
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 8
+
+
+  C:009BH         LINE#         329
+  C:00A1H         LINE#         331
+  C:00A4H         LINE#         332
+  C:00A7H         LINE#         333
+  C:00AAH         LINE#         334
+  C:00ACH         LINE#         336
+  C:00B7H         LINE#         337
+  C:00B7H         LINE#         339
+  C:00BAH         LINE#         340
+  C:00BDH         LINE#         342
+  C:00F8H         LINE#         343
+  C:00F8H         LINE#         346
+  C:00FBH         LINE#         347
+  C:00FDH         LINE#         349
+  C:00FDH         LINE#         350
+  C:0108H         LINE#         351
+  C:0108H         LINE#         353
+  C:0119H         LINE#         354
+  C:0119H         LINE#         356
+  C:012AH         LINE#         357
+  C:012AH         LINE#         359
+  C:0138H         LINE#         360
+  C:0140H         LINE#         365
+  C:014AH         LINE#         368
+  C:014DH         LINE#         369
+  C:014FH         LINE#         371
+  C:0152H         LINE#         372
+  C:0152H         LINE#         373
+  C:0152H         LINE#         375
+  -------         ENDPROC       TGT_WRITE_FLASH
+  -------         PROC          TGT_GET_PAGE_CRC
+  -------         DO            
+  D:003BH         SYMBOL        addr
+  D:003FH         SYMBOL        crc
+  D:0043H         SYMBOL        i
+  D:0045H         SYMBOL        codeptr
+  -------         ENDDO         
+  C:01FCH         LINE#         390
+  C:01FCH         LINE#         391
+  C:01FCH         LINE#         414
+  C:01FFH         LINE#         415
+  C:0202H         LINE#         416
+  C:0205H         LINE#         417
+  C:0208H         LINE#         419
+  C:0246H         LINE#         422
+  C:0246H         LINE#         424
+  C:0249H         LINE#         426
+  C:024BH         LINE#         428
+  C:024BH         LINE#         429
+  C:0250H         LINE#         432
+  C:0258H         LINE#         435
+  C:025CH         LINE#         436
+  C:025CH         LINE#         438
+  C:0268H         LINE#         439
+  C:0270H         LINE#         444
+  C:027FH         LINE#         446
+  C:0282H         LINE#         449
+  C:0288H         LINE#         450
+  C:028BH         LINE#         451
+  C:028EH         LINE#         457
+  C:028EH         LINE#         460
+  -------         ENDPROC       TGT_GET_PAGE_CRC
+  -------         PROC          TGT_WRITE_SIGNATURE
+  C:03A9H         LINE#         476
+  C:03A9H         LINE#         477
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 9
+
+
+  C:03A9H         LINE#         491
+  C:03ADH         LINE#         492
+  C:03ADH         LINE#         494
+  C:03B0H         LINE#         495
+  C:03B2H         LINE#         497
+  C:03B2H         LINE#         498
+  C:03B5H         LINE#         499
+  C:03B8H         LINE#         501
+  C:03C1H         LINE#         502
+  C:03CAH         LINE#         505
+  C:03CDH         LINE#         506
+  C:03CFH         LINE#         507
+  C:03D1H         LINE#         508
+  C:03D3H         LINE#         510
+  C:03D6H         LINE#         511
+  C:03D6H         LINE#         513
+  -------         ENDPROC       TGT_WRITE_SIGNATURE
+  -------         PROC          TGT_RESET_MCU
+  C:FAA9H         LINE#         526
+  C:FAA9H         LINE#         527
+  C:FAA9H         LINE#         528
+  C:FAACH         LINE#         529
+  C:FAB3H         LINE#         531
+  -------         ENDPROC       TGT_RESET_MCU
+  -------         PROC          TGT_UNSUPPORTED_CMD
+  C:FACEH         LINE#         546
+  C:FACEH         LINE#         547
+  C:FACEH         LINE#         548
+  C:FAD1H         LINE#         549
+  -------         ENDPROC       TGT_UNSUPPORTED_CMD
+  -------         ENDMOD        FXXX_TARGETBL_COMMANDS
+
+  -------         MODULE        FXXX_TARGETBL_INFOBLOCK
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:FBEFH         PUBLIC        TGT_BL_InfoBlock
+  -------         ENDMOD        FXXX_TARGETBL_INFOBLOCK
+
+  -------         MODULE        FXXX_TARGETBL_MAIN
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:0159H         PUBLIC        main
+  D:0049H         PUBLIC        Device_Mode
+  D:004AH         PUBLIC        BL_Enabled_Flag
+  -------         PROC          MAIN
+  -------         DO            
+  D:003AH         SYMBOL        cmd_code
+  -------         ENDDO         
+  C:0159H         LINE#         57
+  C:0159H         LINE#         58
+  C:0159H         LINE#         68
+  C:015CH         LINE#         69
+  C:015FH         LINE#         75
+  C:0165H         LINE#         76
+  C:0165H         LINE#         77
+  C:0168H         LINE#         78
+  C:016AH         LINE#         80
+  C:016AH         LINE#         81
+  C:016DH         LINE#         82
+  C:016DH         LINE#         90
+  C:0173H         LINE#         91
+  C:0173H         LINE#         93
+  C:0176H         LINE#         94
+  C:0176H         LINE#         103
+  C:017BH         LINE#         104
+  C:017BH         LINE#         105
+  C:0181H         LINE#         106
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 10
+
+
+  C:0181H         LINE#         108
+  C:0184H         LINE#         109
+  C:0186H         LINE#         111
+  C:0186H         LINE#         113
+  C:0189H         LINE#         114
+  C:018CH         LINE#         115
+  C:018CH         LINE#         116
+  C:018CH         LINE#         122
+  C:018FH         LINE#         123
+  C:019AH         LINE#         129
+  C:019AH         LINE#         130
+  C:019AH         LINE#         132
+  C:01A5H         LINE#         134
+  C:01ADH         LINE#         135
+  C:01ADH         LINE#         136
+  C:01B0H         LINE#         137
+  C:01B0H         LINE#         140
+  C:01B5H         LINE#         141
+  C:01B5H         LINE#         143
+  C:01B8H         LINE#         145
+  C:01BAH         LINE#         146
+  C:01BFH         LINE#         147
+  C:01BFH         LINE#         148
+  C:01D9H         LINE#         149
+  C:01D9H         LINE#         150
+  C:01D9H         LINE#         151
+  C:01DCH         LINE#         152
+  C:01DEH         LINE#         153
+  C:01DEH         LINE#         154
+  C:01E1H         LINE#         155
+  C:01E3H         LINE#         156
+  C:01E3H         LINE#         157
+  C:01E6H         LINE#         158
+  C:01E8H         LINE#         159
+  C:01E8H         LINE#         160
+  C:01EBH         LINE#         161
+  C:01EDH         LINE#         162
+  C:01EDH         LINE#         163
+  C:01F0H         LINE#         164
+  C:01F2H         LINE#         165
+  C:01F2H         LINE#         166
+  C:01F5H         LINE#         167
+  C:01F7H         LINE#         168
+  C:01F7H         LINE#         169
+  C:01FAH         LINE#         170
+  -------         ENDPROC       MAIN
+  -------         ENDMOD        FXXX_TARGETBL_MAIN
+
+  -------         MODULE        FNNN_COMM_COMMTYPE
+  C:0000H         SYMBOL        _ICE_DUMMY_
+  C:FAC3H         PUBLIC        _Comm_Wait_For_Rx_Bytes
+  C:0029H         PUBLIC        Comm_Init
+  C:000EH         PUBLIC        _Comm_Send_Tx_Bytes
+  -------         PROC          COMM_INIT
+  C:0029H         LINE#         71
+  C:0029H         LINE#         72
+  C:0029H         LINE#         75
+  -------         ENDPROC       COMM_INIT
+  -------         PROC          _COMM_WAIT_FOR_RX_BYTES
+  D:003FH         SYMBOL        numbytes_to_read
+  D:0041H         SYMBOL        rx_buf_index
+  C:FAC3H         LINE#         86
+  C:FACBH         LINE#         87
+  C:FACBH         LINE#         96
+  C:FACDH         LINE#         97
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 11
+
+
+  -------         ENDPROC       _COMM_WAIT_FOR_RX_BYTES
+  -------         PROC          _COMM_SEND_TX_BYTES
+  D:0047H         SYMBOL        numbytes_to_send
+  C:000EH         LINE#         109
+  C:0012H         LINE#         110
+  C:0012H         LINE#         116
+  -------         ENDPROC       _COMM_SEND_TX_BYTES
+  -------         ENDMOD        FNNN_COMM_COMMTYPE
+
+  -------         MODULE        ?C_STARTUP
+  C:0295H         SEGMENT       ?C_C51STARTUP
+  I:004BH         SEGMENT       ?STACK
+  C:0000H         PUBLIC        ?C_STARTUP
+  N:0400H         PUBLIC        START_APPLICATION
+  D:00E0H         SYMBOL        ACC
+  D:00F0H         SYMBOL        B
+  D:0083H         SYMBOL        DPH
+  D:0082H         SYMBOL        DPL
+  N:0008H         SYMBOL        HW_INTVEC_SEPARATION
+  N:0003H         SYMBOL        HW_INTVEC_TABLE
+  N:0000H         SYMBOL        IBPSTACK
+  N:0100H         SYMBOL        IBPSTACKTOP
+  N:0080H         SYMBOL        IDATALEN
+  C:0298H         SYMBOL        IDATALOOP
+  N:0003H         SYMBOL        INTVEC_SEPARATION
+  N:0403H         SYMBOL        INTVEC_TABLE
+  N:0000H         SYMBOL        PBPSTACK
+  N:0100H         SYMBOL        PBPSTACKTOP
+  N:0000H         SYMBOL        PDATALEN
+  N:0000H         SYMBOL        PDATASTART
+  N:0000H         SYMBOL        PPAGE
+  N:0000H         SYMBOL        PPAGEENABLE
+  D:00A0H         SYMBOL        PPAGE_SFR
+  D:0081H         SYMBOL        SP
+  C:0295H         SYMBOL        STARTUP1
+  N:0000H         SYMBOL        XBPSTACK
+  N:0000H         SYMBOL        XBPSTACKTOP
+  N:0000H         SYMBOL        XDATALEN
+  N:0000H         SYMBOL        XDATASTART
+  C:0003H         LINE#         166
+  C:000BH         LINE#         169
+  C:0013H         LINE#         172
+  C:001BH         LINE#         175
+  C:0023H         LINE#         178
+  C:002BH         LINE#         181
+  C:0033H         LINE#         184
+  C:003BH         LINE#         187
+  C:0043H         LINE#         190
+  C:004BH         LINE#         193
+  C:0053H         LINE#         196
+  C:005BH         LINE#         199
+  C:0063H         LINE#         202
+  C:006BH         LINE#         205
+  C:0073H         LINE#         208
+  C:007BH         LINE#         211
+  C:0083H         LINE#         214
+  C:008BH         LINE#         217
+  C:0000H         LINE#         237
+  C:0295H         LINE#         244
+  C:0297H         LINE#         245
+  C:0298H         LINE#         246
+  C:0299H         LINE#         247
+  C:029BH         LINE#         296
+  C:029EH         LINE#         307
+  -------         ENDMOD        ?C_STARTUP
+BL51 BANKED LINKER/LOCATER V6.00            11/29/2010  10:58:27  PAGE 12
+
+
+
+  -------         MODULE        ?C?ULCMP
+  C:FA88H         PUBLIC        ?C?ULCMP
+  -------         ENDMOD        ?C?ULCMP
+
+*** WARNING L16: UNCALLED SEGMENT, IGNORED FOR OVERLAY PROCESS
+    SEGMENT: ?CO?FXXX_TARGETBL_INFOBLOCK
+
+Program Size: data=76.0 xdata=0 code=1219
+LINK/LOCATE RUN COMPLETE.  1 WARNING(S),  0 ERROR(S)

@@ -1,0 +1,1 @@
+These models are 32K Flash devices.  They are the same as C8051F341_3_5_7.

@@ -1,0 +1,190 @@
+45200520446540
+ProSLIC
+ASSMANN_A-2004-1-4-LP-N-R
+
+
+0
+12
+6
+ProSLIC
+BEL_SS-52300-001
+
+
+0
+6
+6
+ProSLIC
+CD54
+
+
+0
+2
+2
+ProSLIC
+CP_EIA-3528-21_Kemet-B
+Tantalum Capacitor SMD Kemet-B (3528-21 Metric), IPC_7351 nominal, (Body size from: http://www.kemet.com/Lists/ProductCatalog/Attachments/253/KEM_TC101_STD.pdf), generated with kicad-footprint-generator
+capacitor tantalum
+0
+2
+2
+ProSLIC
+CP_Radial_D6.3mm_P2.50mm
+CP, Radial series, Radial, pin pitch=2.50mm, , diameter=6.3mm, Electrolytic Capacitor
+CP Radial series Radial pin pitch 2.50mm  diameter 6.3mm Electrolytic Capacitor
+0
+2
+2
+ProSLIC
+C_0805_2012Metric
+Capacitor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 76, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf, https://docs.google.com/spreadsheets/d/1BsfQQcO9C6DZCsRaXUlFlo91Tg2WpOkGARC1WS5S8t0/edit?usp=sharing), generated with kicad-footprint-generator
+capacitor
+0
+2
+2
+ProSLIC
+Crystal_HC49-U_Vertical
+Crystal THT HC-49/U http://5hertz.com/pdfs/04404_D.pdf
+THT crystalHC-49/U
+0
+2
+2
+ProSLIC
+DIOM5436X220N
+
+
+0
+2
+2
+ProSLIC
+LED_OF-SMD3528WC
+
+
+0
+2
+2
+ProSLIC
+LQFP32
+Cygnal LQFP32
+
+0
+32
+32
+ProSLIC
+PinHeader_2x01_P2.54mm_Vertical
+Through hole straight pin header, 2x01, 2.54mm pitch, double rows
+Through hole pin header THT 2x01 2.54mm double row
+0
+2
+2
+ProSLIC
+PinHeader_2x03_P2.54mm_Vertical
+Through hole straight pin header, 2x03, 2.54mm pitch, double rows
+Through hole pin header THT 2x03 2.54mm double row
+0
+6
+6
+ProSLIC
+PinHeader_2x05_P2.54mm_Vertical
+Through hole straight pin header, 2x05, 2.54mm pitch, double rows
+Through hole pin header THT 2x05 2.54mm double row
+0
+10
+10
+ProSLIC
+QFN40P500X500X90-41N
+
+
+0
+41
+41
+ProSLIC
+QFP50P1200X1200X120-64N
+
+
+0
+65
+65
+ProSLIC
+QFP80P900X900X120-32N
+
+
+0
+32
+32
+ProSLIC
+QFP80P900X900X160-32N
+
+
+0
+32
+32
+ProSLIC
+RESC2012X60N
+CR0805
+Resistor
+0
+2
+2
+ProSLIC
+R_0805_2012Metric
+Resistor SMD 0805 (2012 Metric), square (rectangular) end terminal, IPC_7351 nominal, (Body size source: IPC-SM-782 page 72, https://www.pcb-3d.com/wordpress/wp-content/uploads/ipc-sm-782a_amendment_1_and_2.pdf), generated with kicad-footprint-generator
+resistor
+0
+2
+2
+ProSLIC
+SILABS
+
+
+0
+0
+0
+ProSLIC
+SOIC-16_3.9x9.9mm_P1.27mm
+SOIC, 16 Pin (JEDEC MS-012AC, https://www.analog.com/media/en/package-pcb-resources/package/pkg_pdf/soic_narrow-r/r_16.pdf), generated with kicad-footprint-generator ipc_gullwing_generator.py
+SOIC SO
+0
+17
+17
+ProSLIC
+SOIC127P599X175-8N
+
+
+0
+8
+8
+ProSLIC
+SOIC127P600X175-16N
+
+
+0
+17
+17
+ProSLIC
+SOIC254P1030X460-6N
+<B>DIODE</B><p>diameter 2.54 mm, horizontal, grid 10.16 mm
+
+0
+6
+6
+ProSLIC
+SOT-223
+module CMS SOT223 4 pins
+CMS SOT
+0
+4
+4
+ProSLIC
+TestPoint_Pad_D1.0mm
+SMD pad as test Point, diameter 1.0mm
+test point SMD pad
+0
+1
+1
+ProSLIC
+USB_B_Lumberg_2411_02_Horizontal
+USB 2.0 receptacle type B, horizontal version, through-hole, https://downloads.lumberg.com/datenblaetter/en/2411_02.pdf
+USB B receptacle horizontal through-hole
+0
+6
+5

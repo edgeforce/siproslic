@@ -1,0 +1,86 @@
+Copyright (c) 2012, Silicon Laboratories, Inc
+
+USB Bootloader with Shared USBXpress Library
+--------------------------------------------
+Version 2.12
+Release Date: 20 DEC 2012
+
+Relevant devices: C8051F320/1/6/7/'F34x/'F38x
+
+USBXpress driver/DLL/firmware library release used: v3.3.0/v3.1.0.0/v3.6
+
+=======================================================
+
+*** This 'demo.txt' file created on: 15 JUN 2005 ***
+* 20DEC2012-SHY: Fix a race condition bug in GetNextRxByte() and add scripts for build.
+* 01NOV2012-SHY: Updated with latest USBXpress(v3.3) and add support for F38x.
+* 18FEB2008-PKC: Fixed step numbering and references to USBXpress release v3.1.1.
+  Note: USBXpress release v3.1.1 contains USBXpress driver v3.1 and DLL v3.1.
+* 08FEB2008-PKC: Updated file paths to reflect the new structure.
+* 19OCT2007-PKC: Updated with latest USBXpress (v3.1.1)
+* 07MAR2007-PKC: Updated with latest USBXpress (v3.1)
+* 06DEC2006-PKC: Updated with latest USBXpress (v3.0.3) and added support for 'F326/7 MCUs.
+* 14APR2006-PKC: Updated with latest information (including USBXpress v2.4)*
+* 13SEP2005-PKC: Updated with USBXpress v2.3 information *
+
+Steps to demonstrate the basic features of this USBXpress Bootloader and Examples:
+
+1. Uninstall any existing version(s) of the USBXpress driver other than v3.3 -- From Add/Remove Programs, uninstall 
+"USBXpress Driver Set" and "Silicon Labs USBXpress vX.X".
+
+2. If not already installed, install the USBXpress v3.1.1 by downloading from:
+   http://www.silabs.com/products/mcu/Pages/USBXpress.aspx
+This copies the driver files and default examples to "C:\SiLabs\MCU\USBXpress".
+
+3. Run the "C:\SiLabs\MCU\USBXpress\Driver\USBXpressInstaller.exe" to preinstall the default drivers (VID=0x10C4; PID=0xEA61).
+
+4. Connect to a C8051F320, C8051F326, C8051F340, or a C8051F380 target board using the Silicon Labs IDE 
+(PC<-->Debug Adapter<-->TB<--Power Adapter). From the IDE, choose the 'Tools > Erase Code Space' command to erase all code on the device.
+
+5. Choose 'Debug > Download Object File...' and select one of these files: 'USB_BL_F320_1_16K.OMF', 'USB_BL_F326_7_16K.OMF', 
+'USB_BL_F34X_64K.OMF', 'USB_BL_F38X_64K.OMF', depending on which device you are using. These files are located at 
+"...\Device_Specific\C8051F*\USB_BL_Firmware_Image\". Click 'Download' to download the bootloader into the device. 
+Disconnect the target board from the Silicon Labs IDE.
+
+6. Unpower the target board. Connect a USB cable between the target board and the PC. Now, power the target board. 
+Windows will might bring up the New Hardware Wizard. Just click "Next" to install the driver (Click 'continue anyway' 
+if you see any unsigned driver warning). To verify whether you have indeed installed the correct driver, go to Device 
+Manager and view the properties of the 'USBXpress' device under 'Universal Serial Bus Controllers'. In the 'Details' 
+tab, you should see the version number for SiUSBXp.sys as 3.1.
+
+7. Run '...\USB_Bootloader_Software\USB_Bootloader_Software_Executable\USBBootloader.exe'. You should see 'ar5w7z' 
+in the device list. Select 'Open' and then use 'Browse' to select the first testpanel hex file: 
+'...\Device_Specific\C8051F*\USB_App_Firmware_Examples\F*_Testpanel1\TestPanel1.hex', depending on the device you are using.
+
+8. Choose 'Download' to download it to the device. After the bootloader reports success, choose 'Reset Device' to reset the 
+device. This will reset the device and take it out of bootload mode.
+
+9. Since the device has been re-enumerated with a different serial number (ar5w7), Windows will consider it as a new device. 
+This might again bring up the New Hardware Wizard. Choose 'Next' to install the driver automatically.
+
+10. Now, run '...\USB_App_Software_Example\Testpanel_Application_Executable\USBTestVBNET.exe'. This will demonstrate that 
+the testpanel demo code is running. To bootload a new code image, click on the 'Bootload' button. This will close the 
+application and reset the device. (Note that there is a small gray box to the left of 'Bootload'. The reason for this 
+will be explained in step 11).
+
+11. Run USBBootloader.exe again. This time, load the second testpanel hex file:
+'...\Device_Specific\C8051F*\USB_App_Firmware_Examples\F*_Testpanel2\TestPanel2.hex', depending on the device you are using.
+
+12. Follow steps 8 and 10. This time you will see that the small box to the left of the 'Bootload' button is blinking green. 
+This is the difference between the two testpanel code images, and shows that the code was indeed updated successfully. 
+(This time there was no New Hardware Wizard because the second testpanel uses the same serial number as the first one).
+
+*** Note: The above steps demonstrate the basic features of the Bootloader. See the application note AN200 [pdf] and the 
+code for more details. To debug the bootloader or user application projects, follow the instructions in the 'Debugging.txt' file. ***
+
+=======================================================
+
+CONTACT INFORMATION
+Silicon Laboratories Inc.
+400 West Cesar Chavez
+Austin, TX 78701
+Please visit the Silicon Labs Technical Support web page:
+https://www.silabs.com/support/pages/contacttechnicalsupport.aspx
+and register to submit a technical support request.
+
+=======================================================

@@ -1,0 +1,42 @@
+Silicon Laboratories Modular Bootloader Framework, Release Notes
+Copyright (C) 2010 Silicon Laboratories, Inc.
+
+
+Relevant Devices:
+-----------------
+
+Silicon Labs C8051Fxxx Microcontrollers
+ 
+
+This release contains the following components:
+-----------------------------------------------
+
+    * "Silicon Labs Serial Bootloader Data Source" source code (Visual C#) and installer (setup.exe)
+    * Target MCU Bootloader firmware template source
+    * Target MCU Application firmware template source 
+    - ReleaseNotes.txt (this file)
+
+Note:
+The PC software "Silicon Labs Serial Bootloader Data Source" source code (Visual C#) 
+and installer (setup.exe) are included as part of AN533SW.zip. This software is required for 
+this bootloader framework. To install, run the following file:
+...\DataSource_Software\Release\setup.exe
+
+Release Dates
+-------------
+	CAN Bootloader Version 0.1 - November 29, 2010
+
+
+Silicon Laboratories Modular Bootloader Framework Revision History
+----------------------------------------------------
+
+
+Version 0.1
+	New Features/Enhancements
+	-------------------------
+	Initial release. 
+
+
+	Corrections
+	-----------
+	None.

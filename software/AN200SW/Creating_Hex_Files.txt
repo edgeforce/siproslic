@@ -1,0 +1,26 @@
+Question
+--------
+
+How do I create an Intel .HEX format file?
+ 
+Answer
+------
+
+Many 8051 'C' linkers produce an OMF-51 output format for the compiled code.  This OMF-51 file contains 
+extra information that is used for debugging.  The Keil tool chain (including the evaluation version
+found in the development kit) comes with a utility to convert the OMF-51 file format into an Intel .HEX file.
+This utility is called "OH51.EXE" and can generally be found in the ..\C51\BIN\ directory where the Keil tool 
+chain is installed.
+
+To use OH51.EXE, call it from the command line with the OMF-51 file as the argument.  For example:
+
+If the OMF-51 output file is named "PROJECTBUILD", and is located in the same directory as the OH51.EXE utility, 
+type the following on the command line:
+
+OH51 PROJECTBUILD
+
+This will generate an Intel .HEX file named "PROJECTBUILD.hex".  If the OMF file had an extension like .OMF, 
+that should be used when passing its name to OH51. For more information on OH51 usage, simply run the OH51.EXE 
+file without any parameters.
+
+The OH51 utility can also be used by "dragging and dropping" the OMF file on the OH51 utility in Windows.

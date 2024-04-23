@@ -1,0 +1,15 @@
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\bin\Release\SerialBootloaderDataSource.exe.manifest
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\bin\Release\SerialBootloaderDataSource.application
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\bin\Release\SerialBootloaderDataSource.exe
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\bin\Release\SerialBootloaderDataSource.pdb
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\ResolveAssemblyReference.cache
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\SerialBootloaderDataSource.MainForm.resources
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\SerialBootloaderDataSource.Properties.Resources.resources
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\GenerateResource-ResGen.read.1.tlog
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\GenerateResource-ResGen.write.1.tlog
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\SerialBootloaderDataSource.exe.manifest
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\SerialBootloaderDataSource.application
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\SerialBootloaderDataSource.exe
+C:\Users\mading\SkyDrive\Work\F390-bootloader\AN533\AN533SW\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\SerialBootloaderDataSource.pdb
+C:\Users\mading\SkyDrive\Work\F390-bootloader\F39x_I2C_TargetBL\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\SerialBootloaderDataSource.exe
+C:\Users\mading\SkyDrive\Work\F390-bootloader\F39x_I2C_TargetBL\DataSource_Software\SerialBootloaderDataSource\SerialBootloaderDataSource\obj\Release\SerialBootloaderDataSource.pdb

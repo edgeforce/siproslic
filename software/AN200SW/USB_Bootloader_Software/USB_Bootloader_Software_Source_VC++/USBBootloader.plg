@@ -1,0 +1,57 @@
+<html>
+<body>
+<pre>
+<h1>Build Log</h1>
+<h3>
+--------------------Configuration: USBBootloader - Win32 Release--------------------
+</h3>
+<h3>Command Lines</h3>
+Creating command line "rc.exe /l 0x409 /fo"Release/USBBootloader.res" /d "NDEBUG" /d "_AFXDLL" "C:\SiLabs\MCU\USBXpress\USB_BL\USB_Bootloader_Software\USB_Bootloader_Software_Source_VC++\USBBootloader.rc"" 
+Creating temporary file "C:\DOCUME~1\pkchidam\LOCALS~1\Temp\RSP171.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/USBBootloader.pch" /Yu"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\SiLabs\MCU\USBXpress\USB_BL\USB_Bootloader_Software\USB_Bootloader_Software_Source_VC++\FirmwareInterface.cpp"
+"C:\SiLabs\MCU\USBXpress\USB_BL\USB_Bootloader_Software\USB_Bootloader_Software_Source_VC++\SiUSBXp_ThreadSync.cpp"
+"C:\SiLabs\MCU\USBXpress\USB_BL\USB_Bootloader_Software\USB_Bootloader_Software_Source_VC++\USBBootloader.cpp"
+"C:\SiLabs\MCU\USBXpress\USB_BL\USB_Bootloader_Software\USB_Bootloader_Software_Source_VC++\USBBootloaderDlg.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\pkchidam\LOCALS~1\Temp\RSP171.tmp" 
+Creating temporary file "C:\DOCUME~1\pkchidam\LOCALS~1\Temp\RSP172.tmp" with contents
+[
+/nologo /MD /W3 /GX /O2 /D "WIN32" /D "NDEBUG" /D "_WINDOWS" /D "_AFXDLL" /D "_MBCS" /FR"Release/" /Fp"Release/USBBootloader.pch" /Yc"stdafx.h" /Fo"Release/" /Fd"Release/" /FD /c 
+"C:\SiLabs\MCU\USBXpress\USB_BL\USB_Bootloader_Software\USB_Bootloader_Software_Source_VC++\StdAfx.cpp"
+]
+Creating command line "cl.exe @C:\DOCUME~1\pkchidam\LOCALS~1\Temp\RSP172.tmp" 
+Creating temporary file "C:\DOCUME~1\pkchidam\LOCALS~1\Temp\RSP173.tmp" with contents
+[
+SiUSBXp.lib /nologo /subsystem:windows /incremental:no /pdb:"Release/USBBootloader.pdb" /machine:I386 /out:"Release/USBBootloader.exe" 
+".\Release\FirmwareInterface.obj"
+".\Release\SiUSBXp_ThreadSync.obj"
+".\Release\StdAfx.obj"
+".\Release\USBBootloader.obj"
+".\Release\USBBootloaderDlg.obj"
+".\Release\USBBootloader.res"
+]
+Creating command line "link.exe @C:\DOCUME~1\pkchidam\LOCALS~1\Temp\RSP173.tmp"
+<h3>Output Window</h3>
+Compiling resources...
+Compiling...
+StdAfx.cpp
+Compiling...
+FirmwareInterface.cpp
+SiUSBXp_ThreadSync.cpp
+USBBootloader.cpp
+USBBootloaderDlg.cpp
+Generating Code...
+Linking...
+Creating command line "bscmake.exe /nologo /o"Release/USBBootloader.bsc"  ".\Release\StdAfx.sbr" ".\Release\FirmwareInterface.sbr" ".\Release\SiUSBXp_ThreadSync.sbr" ".\Release\USBBootloader.sbr" ".\Release\USBBootloaderDlg.sbr""
+Creating browse info file...
+<h3>Output Window</h3>
+
+
+
+<h3>Results</h3>
+USBBootloader.exe - 0 error(s), 0 warning(s)
+</pre>
+</body>
+</html>

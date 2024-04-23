@@ -1,0 +1,18 @@
+BL51 BANKED LINKER/LOCATER V6.00              11/29/2010  10:58:48  PAGE 1
+
+
+BL51 BANKED LINKER/LOCATER V6.00, INVOKED BY:
+C:\KEIL\C51\BIN\BL51.EXE M:\PRIVATE\Projects\Modular_BL\Template\Fnnn_CommType
+>> _TargetApp_Template\Fnnn_TargetApp_CommType_BLsupport.obj, M:\PRIVATE\Proje
+>> cts\Modular_BL\Template\Fnnn_CommType_TargetApp_Template\Fnnn_TargetApp_Sta
+>> rtup.obj, M:\PRIVATE\Projects\Modular_BL\Template\Fnnn_CommType_TargetApp_T
+>> emplate\Fxxx_TargetApp_InfoBlock.obj TO M:\PRIVATE\Projects\Modular_BL\Temp
+>> late\Fnnn_CommType_TargetApp_Template\Fnnn_TargetApp_CommType_BLsupport RS 
+>> (256) PL (68) PW (78) CODE (0X600-0XF9FD, ?CO?FXXX_TARGETAPP_INFOBLOCK (0XF
+>> 9F5))
+
+
+*** FATAL ERROR L210: I/O ERROR ON INPUT FILE:
+    EXCEPTION 0021H: PATH OR FILE NOT FOUND
+    FILE: M:\PRIVATE\Projects\Modular_BL\Template\Fnnn_CommType_TargetApp_Temp
+>> late\Fnnn_TargetApp_CommType_BLsupport.obj

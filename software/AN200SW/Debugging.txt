@@ -1,0 +1,37 @@
+Copyright (c) 2012, Silicon Laboratories, Inc
+
+USB Bootloader with Shared USBXpress Library
+--------------------------------------------
+Version 2.12
+Release Date: 18 FEB 2008
+
+Relevant devices: C8051F320/1/6/7/'F34x/'F38x
+
+USBXpress driver/DLL/firmware library release used: v3.3.0/v3.1.0/v3.6
+
+=======================================================
+
+This file describes how debugging can be performed on the bootloader project and the user project independently using the Silicon Labs IDE.
+
+Since the bootloader and application firmware are two different projects, it is not possible to debug (source-level debug) both of them
+simultaneously. They can be debugged separately:
+
+1. First erase entire codespace using Tools > Erase Code Space in the Silicon labs IDE.
+2. Download the bootloader project. Disconnect the MCU from the IDE
+3. Allow bootloader to run and download the Testpanel1 hex file using the USBBootloader.exe application.
+4. Reconnect using the IDE.
+5. After the above steps, one of the two projects can be debugged. Depending on which one you want to debug, open that project in the IDE. 
+Then press CTRL+SHIFT+C. This will enable the debug features of the IDE. You can place breakpoints at any location in code, or use the 
+single step mode to debug code and watch variables.
+
+=======================================================
+
+CONTACT INFORMATION
+Silicon Laboratories Inc.
+400 West Cesar Chavez
+Austin, TX 78701
+Please visit the Silicon Labs Technical Support web page:
+https://www.silabs.com/support/pages/contacttechnicalsupport.aspx
+and register to submit a technical support request.
+
+=======================================================

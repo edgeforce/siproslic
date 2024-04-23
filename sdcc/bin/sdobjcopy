@@ -1,0 +1,12 @@
+#!/bin/sh
+
+bin=sdobjcopy
+abs_top_builddir=/data/pcbs/SIPROSLIC/sdcc
+path=${abs_top_builddir}/support/sdbinutils/binutils
+
+# non-cygwin
+if [ -f ${path}/.libs/$bin ]; then \
+	path=$path/libs
+fi
+
+$path/$bin "$@"

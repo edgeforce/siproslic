@@ -1,0 +1,252 @@
+/******************************************************************************
+Copyright (c) 2012, Silicon Laboratories, Inc.
+
+Filename : USB_BL.txt
+Project  : USB Bootloader (USB_BL)
+Created  : 16 JUL 2004 / PKC
+Devices  : C8051F320/1/6/7/'F34x/'F38x
+Toolchain: Keil
+
+-------------------------------------------------------------
+USB Bootloader with Shared USBXpress Library
+Version 2.12
+Release Date: 01 NOV 2012
+-------------------------------------------------------------
+
+Description:
+Contains the list of files in this project with short descriptions and
+revision numbers. The assembler, compiler and linker command line flags 
+are also included along with any other special instructions to use this 
+project.
+
+***IMPORTANT NOTE*** Run one of the *.bat build files to build this project.
+If you use the "Build" command in the IDE to build this project, please make
+sure you set the parameters of compilers as you want.
+
+Revision History:
+
+01NOV2012-SHY:
+-Add new scripts
+-Add folders for different files
+18FEB2008-PKC:
+-Initial Revision.		
+		
+******************************************************************************/
+
+
+					-----------------------------------------------
+				===>>> USB Bootloader Firmware - Project Summary <<<===
+					-----------------------------------------------
+
+
+>> Header Files <<------------------------------------------------------------
+
+- 	C8051F320.h
+	Register/bit definitions for the C8051F320/1 product family.
+
+- 	C8051F326.h
+	Register/bit definitions for the C8051F326/7 product family.
+	
+- 	C8051F340.h
+	Register/bit definitions for the C8051F34x product family.
+
+-	compiler_defs.h
+- 	C8051F380_defs.h
+	Register/bit definitions for the C8051F38x product family.
+
+-	USB_API.h (File is part of USBXpress)
+	USBXpress device interface function prototypes and macro definitions.
+
+-	USB_BL_Main.h
+	Contains some macro definitions and function prototypes.
+	
+-	USB_BL_Interface.h
+	Contains some macro definitions and function prototypes. This file is
+	shared between the BL FW project and the PC BL SW project.
+
+-	USB_BL_ISR.h
+	Contains some function prototypes that are defined in USB_BL_ISR.c
+
+-	USB_BL_QueueMgmt.h
+	Contains some macro definitions and function prototypes.
+
+-	USB_BL_Startup.h
+	Contains some macro definitions and function prototypes.
+
+-	USB_BL_APP_Shared.h
+	Contains some extern declarations that are shared between BL & APP FW.
+
+>> Library Files <<-----------------------------------------------------------
+
+-	USBX_F320_1.LIB (File is part of USBXpress Rev. 3.6)
+-	USBX_F326_7.LIB (File is part of USBXpress Rev. 3.6)
+-   	USBX_F34X.LIB (File is part of USBXpress Rev. 3.6)
+-	USBX_F38X.LIB (File is part of USBXpress Rev. 3.6)
+
+	USBXpress device interface functions precompiled with the Keil tool chain.
+
+>> Source Files <<------------------------------------------------------------
+
+-	USB_BL_STARTUP.A51
+	Contains the power-on initialization and interrupt vector redirect code
+	for the USB Bootloader project.
+	Also contains a very short interrupt ISR that redirects the USB_API 
+	interrupt after checking a bit variable to determine whether the device
+	is in Bootload mode or Application mode.
+
+	Note: This file is a modified version of the original STARTUP.A51 file
+	supplied with the Keil tool chain (Version 9).
+
+-	USB_BL_ISR.c
+	Contains the USBXpress API ISR and functions that use the USBXpress
+	firmware API to read & write data from & to the USB bus.
+
+-	USB_BL_Main.c
+	Contains the 'main' function and other function definitions of the USB 
+	Bootloader project.
+
+-	USB_BL_QueueMgmt.c
+	Contains functions to manage the transmit and receive circular FIFOs
+	of the USB Bootloader project. 
+
+-	USB_BL_USB_Descriptor.c
+	Contains the USB Descriptor details that are necessary to call USB_Init().
+	These variables are shared by the application project. Except for the 
+	Serial string, all the other parameters will remain the same for all 
+	products of the same type.
+
+>> Text Files <<--------------------------------------------------------------
+
+-	USB_BL.txt [THIS FILE]
+	Contains the list of files in this project with short descriptions and
+	revision numbers. The assembler, compiler and linker command line flags 
+	are also included along with any other special instructions to use this 
+	project.
+
+-	Readme.txt
+	This file describes how to downalod and run the demo software.
+>> Folder: LINK_CMD <<--------------------------------------------------------------
+   This folder contains link command files.
+
+-	F38X_32K_LINK.TXT,
+	F38X_64K_LINK.TXT,
+	F34X_32K_LINK.TXT,
+	F34X_64K_LINK.TXT,
+	F320_16K_LINK.TXT,
+	F326_16K_LINK.TXT
+
+	Files that contain the linker command line. These files are used by the *.bat
+	build files. The linker command lines are copied from the *.xls file.
+
+-	F38X_32K_LINK_FREE_MODE.TXT,
+	F38X_64K_LINK_FREE_MODE.TXT,
+	F34X_32K_LINK_FREE_MODE.TXT,
+	F34X_64K_LINK_FREE_MODE.TXT,
+	F320_16K_LINK_FREE_MODE.TXT,
+	F326_16K_LINK_FREE_MODE.TXT
+
+	Files that contain the linker command line when files are compiled in 
+	free mode(don't allocate USBXpress codes to absolute address). These files 
+	are used by the *.bat build files. The linker command lines are copied 
+	from the *.xls file. After projects are built, we can parse the 
+	USBXpress code's lenght.  Then we can generate the final link command 
+	with the spreadsheet. 
+
+>> Folder: Auto_gen_BL_HEX <<--------------------------------------------------------------
+   This folder contains all the boot loader images for different MCUs.
+
+-   USB_BL_*.M51/OMF/HEX
+	M51 files are the linker map files (generated by the BL51 linker). They
+	are included in the project just as a quick reference to the memory map.	
+	OMF/HEX are object files. They can be download to MCU.
+-   USB_BL_F*_USB_BL_APP_Shared.h
+        These BL_APP_Shared.h files are generated by the spreadsheet. They will
+	be used in user's application project.
+-   USB_BL_APP_F*_STARTUP.A51
+        These A51 files are generated by the spreadsheet. They will be used in
+	user's application project.
+	
+>> Folder: Scripts <<--------------------------------------------------------------
+   This folder contains all scripts of building BL project.
+
+-   USB_BL_Function_Mapping.xls
+	This file is used to generate the Bootloader Firmware project's linker 
+	command line and User Application Firmware project's STARTUP.A51 file 
+	public symbols. This is for REFERENCE ONLY. There is no need to modify 
+	this for a given version of the bootloader and USBXpress library.
+-	USB_BL_Build.txt
+	This is a batch file with extension changed to *.txt to prevent accidental
+	execution. This is called by one of the other *.bat build files.
+
+-	USB_BL_Build_F320_16K.bat
+	This build file should be used to build the USB_BL_F320_1_16K.OMF file.
+
+-	USB_BL_Build_F326_16K.bat
+	This build file should be used to build the USB_BL_F326_7_16K.OMF file.
+	
+-	USB_BL_Build_F34X_32K.bat
+	This build file should be used to build the USB_BL_F34X_32K.OMF file.
+	
+-	USB_BL_Build_F34X_64K.bat
+	This build file should be used to build the USB_BL_F34X_64K.OMF file.
+
+-       USB_BL_BuildLog.txt
+        This file contains the output of the build process.
+
+-	USB_BL_Parse_Code_Block_len.bat
+        This file is used to parse the code block length of USBXpress library.
+
+-	USB_BL_PARSE_CODE_BLOCK_LEN_LOG.TXT
+        This file contains the output of the parsing code block length process.
+
+-	USB_BL_Parse_string_addr.bat
+        This file is used to parse the USB descriptor const string address
+
+-	USB_BL_F3XX_copy_object_files_to_dest.bat
+        This file is used to copy A51/shared header file/object files(M51/HEX/OMF)
+	to example application folder.
+
+>> Folder: Auto_gen_parse_code_len <<--------------------------------------------------------------
+   This folder contains files that are used to parse the USBXpress code block length.
+
+-   USB_BL_*.M51/OMF/HEX
+	M51 files are the linker map files (generated by the BL51 linker). They
+	are included in the project just as a quick reference to the memory map.	
+	OMF/HEX are object files. They can be download to MCU.
+-	USB_BL_F*_CODE_BLOCK_LEN.txt	
+	These files are parsed from M51 files. They contain the USBXpress code
+	block length.
+
+>> Documentation and Other Files <<-------------------------------------------
+
+-	AN200: USB Bootloader With Shared USBXpress Library
+	A PDF document that describes all the aspects of the USB Bootloader
+	project firmware and software.
+
+
+>> Assembler Command Line <<--------------------------------------------------
+XR GEN DB EP --> Only for initial testing. Use *.bat files to build.
+
+>> Compiler Command Line <<---------------------------------------------------
+DB OE OT(9,Size)  --> Only for initial testing. Use *.bat files to build.
+
+>> Linker Command Line <<-----------------------------------------------------
+See "USB_BL_Function_Mapping.xls" or "F*_LINK.TXT" files for this information.
+Use *.bat files to build.
+ 
+>> Other Project Settings <<--------------------------------------------------
+- 	Tabsize = 3 (entered as spaces)
+
+>> Warnings <<----------------------------------------------------------------
+None.
+
+>> USB_BL Project Statistics <<-----------------------------------------------
+Note: All numbers include the USBXpress Firmware Library.
+See the "USB_BL_*.M51" files for this information.
+
+>> Known Issues <<------------------------------------------------------------
+-	There are no known issues at this time.
+
+// ===========================================================================
+// *** END OF FILE *** USB_BL.txt ***
+// ===========================================================================

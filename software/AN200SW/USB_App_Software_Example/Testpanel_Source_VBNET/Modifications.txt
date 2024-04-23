@@ -1,0 +1,32 @@
+NOTE: To be able to work, SiUSBXp.DLL should be in the same folder as USBTestVBNET.exe
+
+This file lists and describes the modifications made to the original Testpanel VB.NET code that 
+is supplied with USBXpress v2.3 located in:
+C:\SiLabs\MCU\USBXpress\Examples\C8051F32x\F32x_TestPanel\Host\VBNET
+
+1. Code added to 'Form1_Load' in frmSelect.vb to check whether device is in BL mode, and if so, 
+to show a message box.
+2. Code from the 'Timer1_Tick' in frmMain.vb event was moved to a standalone function (SendReceive)
+3. A button named 'Bootload' was added to frmMain.vb and code added for the 'Bootload_Click' event
+4. Added code to 'SendReceive' in frmMain.vb that checks byte #5 in the received 'IOBuf' for &H5 
+(0x05), which indicates that the device will go into BL mode. On receiving the byte, displays a 
+message box and terminates the application.
+5. Added code to 'SendReceive' in frmMain.vb that checks byte #6 in the received 'IOBuf' and toggles
+a check button. This is to demonstrate the added functionality of Testpanel2 firmware (This byte is
+always sent back as '0' by Testpanel1 firmware), thus showing that the testpanel firmware has been updated.
+
+Revision History:
+19OCT2007-PKC:
+	Updated code to stop timer before showing any message boxes in case of an error.
+	Updated check for last character in serial string of BL Mode devices from 'z' to '~'.
+07MAR2007-PKC:
+	Updated with the latest SiUSBXp.DLL, and rebuilt executable.
+06DEC2006-PKC:
+	Updated USBTestModule.vb with the latest USBXpress DLL declarations.
+	Added an additional parameter to SI_Read and SI_Write function calls (set to 0).
+13SEP2005-PKC:
+	Replaced "F32x_" prefixed function calls with "SI_" prefixed function calls
+	Replaced "F32x_" prefixed constants with "SI_" prefixed constants
+	Replaced SiF32xUSB.dll with SiUSBXp.dll
+	Replaced occurences of "SiF32xUSB.dll" in USBTestModule.vb with "SiUSBXp.dll"
+	Changed "ByVal" to "ByRef" in declaration of SI_Close parameter because of change in USBXpress DLL

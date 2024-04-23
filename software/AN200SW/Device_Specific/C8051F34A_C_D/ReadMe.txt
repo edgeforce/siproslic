@@ -1,0 +1,1 @@
+These models are 64K Flash devices.  They are the same as C8051F340_2_4_6.

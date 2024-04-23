@@ -1,0 +1,31 @@
+SYMBOL TABLE OF MODULE:  USB_BL_F34X_64K.OMF (USB_BL_ISR)
+            CODE    0096H     0237H     UNIT         ?PR?USBXCORE_HANDLE_SETUP?USB_API
+            CODE    04BDH     0151H     UNIT         ?PR?USBXCORE_USB_ISR?USB_API
+            CODE    02CDH     01F0H     UNIT         ?PR?_BLOCK_WRITE?BLOCK_WRITE
+            CODE    0875H     0110H     UNIT         ?PR?USBXCORE_VENDOR_USB_API?USB_API
+            CODE    0745H     0130H     UNIT         ?PR?_BLOCK_READ?BLOCK_READ
+            CODE    0A7AH     00BBH     UNIT         ?PR?USBXCORE_GET_DESCRIPTOR?USB_API
+            CODE    0D71H     0073H     UNIT         ?PR?USBXCORE_GET_STATUS?USB_API
+            CODE    120DH     0042H     UNIT         ?PR?USB_SUSPEND?USB_SUSPEND
+            CODE    128DH     003AH     UNIT         ?CO?USB_API
+            CODE    0F62H     005AH     UNIT         ?PR?USBXCORE_SET_CONFIGURATION?USB_API
+            CODE    0EA5H     005FH     UNIT         ?PR?USBXCORE_CLEAR_FEATURE?USB_API
+            CODE    0F04H     005EH     UNIT         ?PR?USBXCORE_SET_FEATURE?USB_API
+            CODE    113AH     0047H     UNIT         ?PR?USBXCORE_GET_CONFIGURATION?USB_API
+            CODE    1371H     0027H     UNIT         ?PR?USBXCORE_USB_RESET?USB_API
+            CODE    1398H     0027H     UNIT         ?PR?USBXCORE_GET_INTERFACE?USB_API
+            CODE    12C7H     002DH     UNIT         ?PR?USB_DISABLE?USB_DISABLE
+            CODE    FA00H     0022H     UNIT         ?PR?USBXCORE_JUMP_ISR?USB_JUMP_ISR
+            CODE    FA43H     0020H     UNIT         ?PR?USBXCORE_SET_ADDRESS?USB_API
+            CODE    13E3H     001DH     UNIT         ?PR?USBXCORE_FORCE_STALL?USB_API
+            CODE    FA96H     0019H     UNIT         ?PR?USB_INT_ENABLE?USB_INT_ENABLE
+            CODE    FAAFH     0014H     UNIT         ?PR?USBXCORE_SET_SOP?USB_API
+            CODE    FAD6H     000FH     UNIT         ?PR?GET_INTERRUPT_SOURCE?GET_INTERRUPT_SOURCE
+            CODE    FAFAH     0008H     UNIT         ?PR?USB_INT_DISABLE?USB_INT_DISABLE
+            86  =DEC2HEX(D186)  ?CO?USB_BL_USB_DESCRIPTOR                                          
+            CODE    060EH     0137H     UNIT         ?PR?_USB_INIT?USB_API
+            CODE    1181H     0047H     UNIT         ?PR?USB_CLOCK_START?USB_CLOCK_START
+            CODE    FAE5H     000CH     UNIT         ?PR?USBXCORE_CLKREC?USB_CLOCK_RECOVERY
+            CODE    0006H     0005H     UNIT         ?PR?USB_GET_LIBRARY_VERSION?USB_GET_LIBRARY_VERSION
+            CODE    000EH     0004H     UNIT         ?C_INITSEG
+?C_INITSEGSTART. . . . . . . CODE;    ** L51 GENERATED **  

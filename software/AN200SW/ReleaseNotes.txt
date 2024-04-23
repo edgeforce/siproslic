@@ -1,0 +1,72 @@
+Silicon Laboratories USBXpress Bootloader Release Notes
+Copyright (C) 2013 Silicon Laboratories, Inc.
+
+
+Relevant Devices:
+-----------------
+
+C8051F320, C8051F321, 
+C8051F326, C8051F327, 
+C8051F340, C8051F341, C8051F342, C8051F343, C8051F344, C8051F345, 
+C8051F346, C8051F347, C8051F348, C8051F349, C8051F34A, C8051F34B, 
+C8051F34C, C8051F34D
+C8051F380, C8051F381, C8051F382, C8051F383, C8051F384, C8051F385, 
+C8051F386, C8051F387.
+
+This release contains the following components:
+-----------------------------------------------
+
+    * USBXpress bootloader firmware source (Keil C51) and pre-built images
+    * USBXpress bootloader software source (VC++) and pre-built executable 'USBBootloader.exe'
+    * USBXpress application firmware startup and shared header files
+    * Testpanel examples (device examples for all supported families)
+        * Firmware source for two different versions
+        * PC application source (VB .NET) and pre-built executable 'USBTestVBNET.exe'
+    - AN200 - application note documenting the bootloader [PDF]
+    - Debugging.txt, Demo.txt, Creating_Hex_Files.txt - text files with instructions
+    - ReleaseNotes.txt (this file)
+
+Release Dates
+-------------
+	USBXpress Bootloader Version 2.13 - Oct 16, 2013
+	USBXpress Bootloader Version 2.12 - Dec 20, 2012
+
+
+Silicon Laboratories USBXpress Bootloader Revision History
+-----------------------------------------
+version 2.13
+	updated SiUSBxp.dll to sync with USBXpress SDK V4.0
+	
+Version 2.12
+        Corrections
+	-----------
+        Fix a race condition bug in GetNextRxByte()
+
+Version 2.11
+	New Features/Enhancements
+	-----------
+        Update scripts to help build the projects
+
+Version 2.1
+	New Features/Enhancements
+	-----------
+	Add F38x support
+	Update USBXpress librarys to V3.6
+
+Version 2.0.1
+	Corrections
+	-----------
+	Updated '...\Demo.txt'.
+	Modified '...\USB_Bootloader_Firmware_Source\USB_BL_QueueMgmt.h' for backward compatibility with older Keil compilers.
+
+
+Version 2.0
+	New Features/Enhancements
+	-------------------------
+	Initial public release. 
+
+	Uses USBXpress Release 3.1.1.
+
+	Corrections
+	-----------
+	None.
